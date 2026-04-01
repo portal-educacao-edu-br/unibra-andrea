@@ -7,30 +7,35 @@
   <style>
     body {
       margin: 0;
+      font-family: Arial, sans-serif;
       background-color: #ffffff;
     }
 
-    /* Imagem no topo (rodapé visual) */
+    /* Barra no topo */
     .topo {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #fff;
-      text-align: center;
+      height: 40px;
+      background-color: #e9e9e9;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
       z-index: 1000;
     }
 
+    /* Imagem pequena no canto esquerdo */
     .topo img {
+      height: 25px;
       width: auto;
-      max-height: 40px; /* ajusta altura */
-      object-fit: contain;
     }
 
-    /* Espaço para não cobrir o PDF */
+    /* Área do PDF */
     .conteudo {
-      margin-top: 50px;
-      height: calc(100vh - 50px);
+      margin-top: 40px;
+      height: calc(100vh - 40px);
     }
 
     iframe {
@@ -43,7 +48,7 @@
 
 <body>
 
-  <!-- IMAGEM DO RODAPÉ -->
+  <!-- TOPO COM IMAGEM -->
   <div class="topo">
     <img src="rodape.png" alt="Rodapé">
   </div>
