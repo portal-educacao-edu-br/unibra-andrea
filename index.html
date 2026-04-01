@@ -7,28 +7,30 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
       background-color: #ffffff;
     }
 
-    /* Rodapé no topo (estilo banner) */
-    .footer {
-      width: 100%;
-      background-color: #222;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      font-size: 18px;
+    /* Imagem no topo (rodapé visual) */
+    .topo {
       position: fixed;
       top: 0;
       left: 0;
+      width: 100%;
+      background-color: #fff;
+      text-align: center;
       z-index: 1000;
     }
 
+    .topo img {
+      width: 100%;
+      max-height: 80px; /* ajusta altura */
+      object-fit: contain;
+    }
+
     /* Espaço para não cobrir o PDF */
-    .content {
-      margin-top: 60px;
-      height: calc(100vh - 60px);
+    .conteudo {
+      margin-top: 80px;
+      height: calc(100vh - 80px);
     }
 
     iframe {
@@ -41,13 +43,13 @@
 
 <body>
 
-  <!-- Rodapé / topo -->
-  <div class="footer">
-    SEU RODAPÉ AQUI (ex: © 2026 - Meu Projeto)
+  <!-- IMAGEM DO RODAPÉ -->
+  <div class="topo">
+    <img src="rodape.png" alt="Rodapé">
   </div>
 
   <!-- PDF -->
-  <div class="content">
+  <div class="conteudo">
     <iframe src="arquivo.pdf"></iframe>
   </div>
 
